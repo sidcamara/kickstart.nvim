@@ -9,7 +9,7 @@ NOTE: Reference for how Neovim integrates Lua.
 
 NOTE: Get help with documentation
 - :help
-- keymap "<space>sh" 
+- keymap "<space>sh"
 
 --]]
 
@@ -102,6 +102,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+vim.keymap.set('t', '<Esc><Esc><Esc>', '<C-\\><C-n>:q!<CR>', { desc = 'Close terminal' })
 
 -- Open split terminal
 vim.keymap.set('n', '<leader>j', ':vsplit | terminal<CR>', { desc = 'Open terminal in vertical split' })
